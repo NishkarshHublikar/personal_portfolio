@@ -1,0 +1,257 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Times Square Background */
+    background:
+        linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)),
+        /* Professional Dark Overlay */
+        url('https://images.unsplash.com/photo-1534430480872-3498386e7856?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    /* Times Square NYC */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.heroContent {
+    z-index: 10;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.textContent {
+    flex: 1;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.imageContent {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.profileImage {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    /* Intitial State: Below the screen */
+    transform: translateY(100%) scale(0.9);
+    opacity: 0;
+
+    /* Pop Up Animation */
+    animation: popUpBottom 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes popUpBottom {
+    0% {
+        transform: translateY(100%) scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-50px) scale(1.1);
+        opacity: 1;
+    }
+}
+
+.greeting {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #06b6d4;
+    /* Cyan neon */
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+    opacity: 0;
+    animation: slideRight 0.8s ease forwards;
+}
+
+.name {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    line-height: 1.1;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    animation: slideRight 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #d946ef, #8b5cf6, #3b82f6);
+    /* Neon Gradients */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+    filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.3));
+    opacity: 0;
+    animation: slideRight 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #e2e8f0;
+    /* Light text */
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    max-width: 600px;
+    opacity: 0;
+    animation: slideRight 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.ctaGroup {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.primaryButton,
+.secondaryButton,
+.cvButton {
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cvButton {
+    background: transparent;
+    border: 2px solid #06b6d4;
+    /* Neon Cyan Border */
+    color: #06b6d4;
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+}
+
+.cvButton:hover {
+    background: rgba(6, 182, 212, 0.1);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+    transform: translateY(-2px);
+    color: #fff;
+    border-color: #22d3ee;
+}
+
+.primaryButton,
+.secondaryButton {
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.primaryButton {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 14px 0 rgba(99, 102, 241, 0.39);
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.23);
+}
+
+.secondaryButton {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--foreground);
+}
+
+.secondaryButton:hover {
+    background: var(--surface);
+    border-color: var(--foreground);
+}
+
+@media (max-width: 968px) {
+    .hero {
+        align-items: flex-start;
+        padding-top: 6rem;
+    }
+
+    .heroContent {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .textContent {
+        text-align: center;
+        padding-left: 0;
+        z-index: 20;
+    }
+
+    .imageContent {
+        height: 50vh;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0.5;
+    }
+
+    .ctaGroup {
+        justify-content: center;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}

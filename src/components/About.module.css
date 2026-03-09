@@ -1,0 +1,77 @@
+.about {
+    padding: 6rem 2rem;
+    background-color: var(--surface);
+    color: var(--foreground);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #475569;
+    /* Slate-600 */
+    line-height: 1.7;
+}
+
+.skills h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.skillGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skillItem {
+    background: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+    transition: border-color 0.3s ease;
+}
+
+.skillItem:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

@@ -1,5 +1,5 @@
 import styles from './Hero.module.css';
-
+import Image from "next/image";
 export default function Hero() {
     return (
         <section className={styles.hero}>
@@ -26,7 +26,7 @@ export default function Hero() {
                       The current image is a placeholder. 
                     */}
                     <img
-                        src="https://png.pngtree.com/png-vector/20230918/ourmid/pngtree-man-in-shirt-smiles-and-gives-thumbs-up-to-show-approval-png-image_10094381.png"
+                        src="nishkarsh.png"
                         alt="Nishkarsh Hublikar"
                         className={styles.profileImage}
                     />

@@ -9,9 +9,9 @@ export default function Projects() {
             link: "#"
         },
         {
-            title: "Task Management App",
-            description: "A drag-and-drop task manager inspired by Kanban boards. Features real-time updates.",
-            tags: ["React", "Firebase", "DnD"],
+            title: "To Do App",
+            description: "A To-Do application which allows users to create, edit, and delete tasks.",
+            tags: ["Node.js", "Supabase", "TypeScript"],
             link: "#"
         },
         {

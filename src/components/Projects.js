@@ -12,7 +12,7 @@ export default function Projects() {
             title: "To Do App",
             description: "A To-Do application which allows users to create, edit, and delete tasks.",
             tags: ["Node.js", "Supabase", "JavaScript"],
-            link: "#"
+            link: "https://nishkarshhublikar.github.io/todo_list/"
         },
         {
             title: "Weather Forecast",

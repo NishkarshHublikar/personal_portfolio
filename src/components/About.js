@@ -22,7 +22,7 @@ export default function About() {
                         </p>
                     </div>
                     <div className={styles.skills}>
-                        <h3>Skills & Technologies</h3>
+                        <h3>Skills</h3>
                         <div className={styles.skillGrid}>
                             {skills.map((skill, index) => (
                                 <span key={index} className={styles.skillItem}>{skill}</span>

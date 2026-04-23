@@ -17,7 +17,8 @@
 
 .text {
     margin-bottom: 3rem;
-    color: #475569;
+    color: var(--foreground);
+    opacity: 0.8;
 }
 
 .form {
@@ -68,9 +69,10 @@
 }
 
 .button:hover {
-    background: #2563eb;
-    /* Blue-600 */
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
+
 
 .status {
     margin-top: 1rem;

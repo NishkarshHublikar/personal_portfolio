@@ -39,8 +39,8 @@
 .text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    color: #475569;
-    /* Slate-600 */
+    color: var(--foreground);
+    opacity: 0.8;
     line-height: 1.7;
 }
 

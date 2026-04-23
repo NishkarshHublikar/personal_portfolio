@@ -5,6 +5,7 @@ import Publications from '@/components/Publications';
 import Contact from '@/components/Contact';
 import ThemeToggle from '@/components/ThemeToggle';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <Projects />
       <Publications />
       <Contact />
+      <Footer />
     </main>
   );
 }
+

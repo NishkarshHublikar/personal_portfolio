@@ -56,11 +56,13 @@
 
 .conference {
     font-size: 0.95rem;
-    color: #666;
+    color: var(--foreground);
+    opacity: 0.6;
     margin-bottom: 1rem;
     font-style: italic;
     font-weight: 500;
 }
+
 
 .description {
     color: var(--foreground);

@@ -2,7 +2,7 @@ import styles from './Hero.module.css';
 import Image from "next/image";
 export default function Hero() {
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} id="hero">
             <div className={styles.heroContent}>
                 <div className={styles.textContent}>
                     <p className={styles.greeting}>Hello, I am</p>
@@ -25,9 +25,12 @@ export default function Hero() {
                       NOTE: For the best "pop up" effect, use a transparent PNG of yourself (no background).
                       The current image is a placeholder. 
                     */}
-                    <img
-                        src="nishkarsh.png"
+                    <Image
+                        src="/nishkarsh.png"
                         alt="Nishkarsh Hublikar"
+                        width={800}
+                        height={1000}
+                        priority
                         className={styles.profileImage}
                     />
                 </div>

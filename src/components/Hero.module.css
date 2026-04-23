@@ -208,14 +208,16 @@
 
 .secondaryButton {
     background: transparent;
-    border: 1px solid var(--border);
-    color: var(--foreground);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
 }
 
 .secondaryButton:hover {
-    background: var(--surface);
-    border-color: var(--foreground);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    transform: translateY(-2px);
 }
+
 
 @media (max-width: 968px) {
     .hero {
